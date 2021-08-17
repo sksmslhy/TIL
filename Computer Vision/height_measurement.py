@@ -54,13 +54,12 @@ hr = 201
 br_b = np.cross(br, b)  # (br x b) 직선
 q = np.cross(l, br_b)  # (l x (br x b) 점
 q = q / q[2]
-print("q : ", q)   # -> 대략 (x : 99 y : 404) 언저리 나오면 됨.
+print("q : ", q) 
 tr_l_br_b = np.cross(tr, q)    # (tr x (l x (br x b))) 직선
 p_b = np.cross(p, b)    # (p x b) 직선
 t_b = np.cross(t, b)
 i = np.cross(t_b, tr_l_br_b)    # 점
 i = i / i[2]
-# i = np.array([714, 343, 1]) # -> 이 값 넣으면 맞게 추정
 print("i : ", i)
 
 # (xw 1).T = H(xi 1).T
